@@ -1,5 +1,5 @@
-import Stories from '../../src/components/stories'
-import ExampleComponent from '../../src/components/examplecomponent'
+import Stories from 'components/stories'
+import ExampleComponent from 'components/examplecomponent'
 
 const exampleComponent = {
   arg: 'Example Component',
