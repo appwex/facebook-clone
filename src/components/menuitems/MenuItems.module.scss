@@ -1,2 +1,17 @@
+@import '../../../styles/colors.module.scss';
+@import '../../../styles/common.module.scss';
+
 .container {
+  @extend .flexAlignCen;
+  gap: 10px;
+  width: 300px;
+  height: 52px;
+  padding: 0 8px;
+  border-radius: 8px;
+  color: $text;
+  cursor: pointer;
+
+  &:hover {
+    background: $lightGrayishBlue;
+  }
 }
