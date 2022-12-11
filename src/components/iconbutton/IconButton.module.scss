@@ -1,0 +1,25 @@
+@import 'styles/common.scss';
+@import 'styles/colors.scss';
+
+.container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  @extend .flexCenter;
+
+  &:hover {
+    background: $veryLightGray;
+  }
+}
+
+.primary {
+  background: $vividBlue;
+
+  svg {
+    fill: $white;
+  }
+}
+
+.secondary {
+  background: $lightGrayishBlue;
+}
