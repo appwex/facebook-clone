@@ -39,7 +39,9 @@
 .labeledSecondary {
   height: 40px;
   @extend .flexCenter;
-  padding: 5px;
+  padding: 2px;
+  min-width: 235px;
+  max-width: 324px;
 
   a {
     text-decoration: none;
@@ -48,9 +50,8 @@
   .content {
     @extend .flexCenter;
     gap: 5px;
-    min-width: 235px;
-    width: 100%;
-    max-width: 320px;
+    min-width: 200px;
+    width: 324px;
     height: 40px;
     border-radius: 8px;
   }

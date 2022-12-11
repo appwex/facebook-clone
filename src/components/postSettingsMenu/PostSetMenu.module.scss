@@ -1,0 +1,39 @@
+@import 'styles/colors';
+@import 'styles/common';
+
+.container {
+  width: 100%;
+  min-width: 500px;
+  max-width: 680px;
+  height: 93px;
+  background: $white;
+  border-radius: 10px;
+  user-select: none;
+
+  .row1 {
+    @extend .flexAlignCen;
+    justify-content: space-between;
+    padding: 0 10px 0 16px;
+
+    .divider {
+      @extend .divider;
+    }
+
+    .left {
+      padding: 6px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .right {
+      display: flex;
+      gap: 10px;
+      padding: 6px;
+    }
+  }
+
+  .row2 {
+    @extend .flexCenter;
+    padding: 0 16px;
+  }
+}
