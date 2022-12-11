@@ -6,6 +6,7 @@
   width: 130px;
   height: 56px;
   padding: 3px;
+  user-select: none;
 
   .icon {
     @extend .flexCenter;
