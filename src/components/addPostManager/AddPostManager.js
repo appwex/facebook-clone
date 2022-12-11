@@ -39,6 +39,7 @@ AddPostManager.defaultProps = {
       icon="null"
       width="100%"
       placeholder="Whats on your mind, John Doe?"
+      customClass={stl.hoverEffect}
     />
   ),
   buttons: [

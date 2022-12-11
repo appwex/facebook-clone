@@ -1,7 +1,15 @@
+@import 'styles/colors';
+@import 'styles/common';
+
 .wrapper {
-  display: flex;
-  flex-direction: column;
+  @extend .flexCol;
   align-items: flex-start;
   padding: 1rem 1.5rem;
   gap: 10px;
+}
+
+.hoverEffect {
+  &:hover {
+    background: $veryLightGray;
+  }
 }

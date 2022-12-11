@@ -8,6 +8,8 @@ import LiveVideoIcon from 'assets/svg/liveVideoIcon.svg'
 import PhotoVideoIcon from 'assets/svg/photoVideoIcon.svg'
 import FeelingIcon from 'assets/svg/feelingActivityIcon.svg'
 
+import stl from './Stories.module.scss'
+
 const addPostManager = {
   arg: 'Add Post Manager',
   avatar: <AvatarButton width="44px" />,
@@ -16,6 +18,7 @@ const addPostManager = {
       icon="null"
       width="100%"
       placeholder="Whats on your mind, John Doe?"
+      customClass={stl.hoverEffect}
     />
   ),
   buttons: [

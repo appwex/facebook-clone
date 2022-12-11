@@ -36,4 +36,10 @@
       }
     }
   }
+
+  .hoverEffect {
+    &:hover {
+      background: $veryLightGray;
+    }
+  }
 }
