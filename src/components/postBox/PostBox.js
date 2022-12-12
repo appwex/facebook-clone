@@ -1,18 +1,13 @@
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import clsx from 'clsx'
 
 import AvatarButton from 'components/avatarButton'
-import IconButton from 'components/iconbutton'
-import Tablink from 'components/tablink'
 
 import PublicIcon from 'assets/svg/publicIcon.svg'
-import MoreIcon from 'assets/svg/moreIcon.svg'
-import CloseIcon from 'assets/svg/crossIcon.svg'
+
 import LoveIcon from 'assets/svg/facebookLoveIcon.svg'
 import LikeIcon from 'assets/svg/facebookLikeIcon.svg'
-import LikeIcon2 from 'assets/svg/likeIcon.svg'
-import CommentIcon from 'assets/svg/commentIcon.svg'
-import ShareIcon from 'assets/svg/shareIcon.svg'
 
 import stl from './PostBox.module.scss'
 
@@ -20,6 +15,7 @@ const PostBox = ({
   imgSrc,
   title,
   titleLink,
+  buttons,
   msgContent,
   media,
   detailName,
@@ -31,6 +27,7 @@ const PostBox = ({
   handleComment,
   handleShare,
   handleReacted,
+  interactOpt,
   customClass,
 }) => {
   return (
@@ -56,16 +53,9 @@ const PostBox = ({
           </div>
         </div>
         <div className={stl.right}>
-          <IconButton
-            variant="secondary"
-            customClass={stl.button}
-            icon={<MoreIcon />}
-          />
-          <IconButton
-            variant="secondary"
-            customClass={stl.button}
-            icon={<CloseIcon />}
-          />
+          {buttons.map((btn, i) => (
+            <span key={i}>{btn}</span>
+          ))}
         </div>
       </div>
       <div id="message" className={stl.message}>
@@ -124,32 +114,29 @@ const PostBox = ({
           </div>
         </div>
         <div className={stl.divider}></div>
-        <div className={stl.interactOpt}>
-          <Tablink
-            type="labeledSecondary"
-            bgColor="none"
-            icon={<LikeIcon2 />}
-            label="Like"
-            customClass={stl.tablink}
-          />
-          <Tablink
-            type="labeledSecondary"
-            bgColor="none"
-            icon={<CommentIcon />}
-            label="Comment"
-            customClass={stl.tablink}
-          />
-          <Tablink
-            type="labeledSecondary"
-            bgColor="none"
-            icon={<ShareIcon />}
-            label="Share"
-            customClass={stl.tablink}
-          />
-        </div>
+        <div className={stl.interactOpt}>{interactOpt.map((opt) => opt)}</div>
       </div>
     </div>
   )
+}
+
+PostBox.propTypes = {
+  imgSrc: PropTypes.string,
+  title: PropTypes.string,
+  titleLink: PropTypes.string,
+  buttons: PropTypes.array,
+  msgContent: PropTypes.array,
+  media: PropTypes.node,
+  detailName: PropTypes.array,
+  numOfReact: PropTypes.string,
+  numOfComments: PropTypes.string,
+  numOfShares: PropTypes.string,
+  handleImage: PropTypes.func,
+  handleLike: PropTypes.func,
+  handleComment: PropTypes.func,
+  handleShare: PropTypes.func,
+  handleReacted: PropTypes.func,
+  interactOpt: PropTypes.array,
 }
 
 export default PostBox
