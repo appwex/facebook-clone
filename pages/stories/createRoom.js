@@ -20,6 +20,7 @@ const createRoom = {
     <AvatarButton variant="status" />,
     <AvatarButton variant="status" />,
   ],
+  handleCreateRoom: () => console.log('Clicked...'),
 }
 
 const CreateRoomStory = () => (

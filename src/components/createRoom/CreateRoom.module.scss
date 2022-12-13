@@ -33,8 +33,9 @@
       background: $white;
       border-radius: 50%;
       box-shadow: 0px 0px 2px $veryDarkGrayishBlue;
-      z-index: 1;
       cursor: pointer;
+      opacity: 0;
+      z-index: -5;
 
       svg {
         width: 24px;
@@ -69,6 +70,10 @@
       font-size: 14px;
       font-weight: 600;
       cursor: pointer;
+
+      &:hover {
+        background: $veryLightGray2;
+      }
     }
 
     .avatars {
@@ -77,9 +82,14 @@
       margin-right: 8px;
     }
 
-    .rightSpan {
-      width: 40px;
-      height: 40px;
+    .showPrevBtn {
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .showNextBtn {
+      z-index: 1;
+      opacity: 1;
     }
   }
 }
