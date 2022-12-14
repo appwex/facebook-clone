@@ -1,7 +1,7 @@
 import Stories from '../../src/components/stories'
 import Button from '../../src/components/button'
 
-import AddIcon from '../../src/assets/addIcon.svg'
+import AddIcon from '../../src/assets/plus.svg'
 
 const buttonPrimary = {
   arg: 'Primary',
@@ -18,10 +18,7 @@ const buttonSecondary = {
 }
 
 const ButtonStory = () => (
-  <Stories
-    argList={[buttonPrimary, buttonSecondary]}
-    template={(args) => <Button {...args} />}
-  />
+  <Stories argList={[buttonPrimary, buttonSecondary]} template={Button} />
 )
 
 export default ButtonStory
