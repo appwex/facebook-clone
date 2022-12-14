@@ -21,13 +21,10 @@ const Searchbar = ({ icon, placeholder, customClass }) => {
 
   return (
     <div className={clsx(stl.container, customClass)}>
-      <label for="search" id="label">
-        {icon}
-      </label>
+      <label id="label">{icon}</label>
       <input
         type="search"
         id="search"
-        name="search"
         placeholder={placeholder}
         value={value}
         onChange={(e) => setValue(e.target.value)}

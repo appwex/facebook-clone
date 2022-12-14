@@ -1,0 +1,16 @@
+import Stories from 'components/stories'
+import MenuItems from 'components/menuitems'
+
+import FriendsIcon from 'assets/friendsIcon2.svg'
+
+const menuItems = {
+  arg: 'Menu Items',
+  icon: <FriendsIcon />,
+  label: 'Friends',
+}
+
+const MenuItemsStory = () => (
+  <Stories argList={[menuItems]} template={(args) => <MenuItems {...args} />} />
+)
+
+export default MenuItemsStory
