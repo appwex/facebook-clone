@@ -16,12 +16,15 @@ const StoriesLinks = () => (
 =======
     <Link href="/stories/tablink">Tablink</Link>
     <Link href="/stories/searchbar">Searchbar</Link>
+<<<<<<< HEAD
 >>>>>>> 2f3533d (Add Searchbar Component)
 =======
 >>>>>>> ef7cf4b (Add Button Component)
 =======
     <Link href="/stories/tablink">Tablink</Link>
 >>>>>>> 2c5db88 (Add Tablink Component)
+=======
+>>>>>>> f13aa6f (Add Searchbar Component)
   </div>
 )
 
