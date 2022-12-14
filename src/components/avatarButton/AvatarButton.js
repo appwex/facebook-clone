@@ -4,13 +4,21 @@ import clsx from 'clsx'
 
 import stl from './AvatarButton.module.scss'
 
-const AvatarButton = ({ imgSrc, variant, alt, width, onClick, cusomClass }) => {
+const AvatarButton = ({
+  imgSrc,
+  variant,
+  alt,
+  width,
+  height,
+  onClick,
+  cusomClass,
+}) => {
   return (
     <div
       onClick={() => {
         onClick()
       }}
-      style={{ width: width }}
+      style={{ width: width, height: height }}
       className={clsx(stl.container, stl[`${variant}`], cusomClass)}
     >
       <div>
@@ -31,6 +39,8 @@ AvatarButton.propTypes = {
   imgSrc: PropTypes.string,
   variant: PropTypes.string,
   alt: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
   onClick: PropTypes.func,
 }
 

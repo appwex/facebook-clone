@@ -13,3 +13,19 @@
     background: $veryLightGray1;
   }
 }
+
+.button {
+  background: none;
+
+  &:hover {
+    background: $veryLightGray2;
+  }
+}
+
+.tablink {
+  div {
+    color: $veryDarkGrayishBlue;
+    font-weight: bold;
+    gap: 10px;
+  }
+}

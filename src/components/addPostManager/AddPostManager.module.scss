@@ -7,9 +7,10 @@
   width: 100%;
   @extend .flexCol;
   gap: 10px;
-  padding: 12px 16px 10px 16px;
+  padding: 12px 1rem 10px 1rem;
   background: $white;
-  border-radius: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px $boxShadow;
   user-select: none;
 
   .row1 {

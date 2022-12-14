@@ -12,6 +12,7 @@ const StoriesLinks = () => (
     <Link href="/stories/avatarButton">Avatar Button</Link>
     <Link href="/stories/addPostManager">Add Post Manager</Link>
     <Link href="/stories/postSettingsMenu">Post Settings Menu</Link>
+    <Link href="/stories/postBox">Post Box</Link>
   </div>
 )
 
