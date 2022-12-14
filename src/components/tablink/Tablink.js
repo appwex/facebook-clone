@@ -29,8 +29,8 @@ const Tablink = ({
           {label}
         </div>
         <div style={{ background: bgColor }} className={stl.borderBot}></div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   )
 }
 
