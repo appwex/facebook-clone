@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
-import GroupsIcon from '../../assets/groupsIcon.svg'
+import GroupsIcon from 'assets/groupsIcon.svg'
 
 import stl from './MenuItems.module.scss'
 

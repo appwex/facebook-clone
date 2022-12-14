@@ -1,15 +1,8 @@
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import AddIcon from '../../assets/plus.svg'
-=======
-import AddIcon from '../../assets/addIcon.svg'
->>>>>>> 3676363 (Add Button Component)
-=======
-import AddIcon from '../../assets/addIcon.svg'
->>>>>>> ef7cf4b (Add Button Component)
+import AddIcon from 'assets/plus.svg'
+import AddIcon from 'assets/addIcon.svg'
 
 import stl from './Button.module.scss'
 

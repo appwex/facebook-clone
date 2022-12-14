@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
-import NotificationIcon from '../../assets/notificationIcon.svg'
+import NotificationIcon from 'assets/notificationIcon.svg'
 
 import stl from './IconButton.module.scss'
 

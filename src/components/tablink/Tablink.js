@@ -2,21 +2,15 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import HomeIcon from '../../assets/homeIcon.svg'
+import HomeIcon from 'assets/homeIcon.svg'
 
 import stl from './Tablink.module.scss'
 
 const Tablink = ({ variant, bgColor, link, icon, customClass }) => {
   return (
-<<<<<<< HEAD
     <Link href={link}>
       <div className={clsx(stl.container, customClass)}>
         <div className={clsx(stl.icon, stl[variant])}>{icon}</div>
-=======
-    <Link href={`${link}`}>
-      <div className={clsx(stl.container, customClass)}>
-        <div className={clsx(stl.icon, stl[`${variant}`])}>{icon}</div>
->>>>>>> 2c5db88 (Add Tablink Component)
         <div style={{ background: bgColor }} className={stl.borderBot}></div>
       </div>
     </Link>

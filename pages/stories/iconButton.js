@@ -1,6 +1,6 @@
-import Stories from '../../src/components/stories'
-import IconButton from '../../src/components/iconbutton'
-import NotificationIcon from '../../src/assets/notificationIcon.svg'
+import Stories from 'components/stories'
+import IconButton from 'components/iconbutton'
+import NotificationIcon from 'assets/notificationIcon.svg'
 
 const iconButtonPrimary = {
   arg: 'Primary',

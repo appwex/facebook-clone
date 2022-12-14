@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 @import 'styles/colors.scss';
 @import 'styles/common.scss';
-=======
-@import '../../../styles/colors.module.scss';
-@import '../../../styles/common.module.scss';
->>>>>>> 2c5db88 (Add Tablink Component)
 
 .container {
   position: relative;
@@ -26,17 +21,9 @@
   }
 }
 
-<<<<<<< HEAD
 .primary svg {
   stroke: none;
   fill: $vividBlue;
-=======
-.primary {
-  svg {
-    stroke: none;
-    fill: $vividBlue;
-  }
->>>>>>> 2c5db88 (Add Tablink Component)
 }
 
 .secondary {
