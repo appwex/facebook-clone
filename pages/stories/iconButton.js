@@ -1,6 +1,6 @@
 import Stories from 'components/stories'
 import IconButton from 'components/iconbutton'
-import NotificationIcon from 'assets/notificationIcon.svg'
+import NotificationIcon from 'assets/svg/notificationIcon.svg'
 
 const iconButtonPrimary = {
   arg: 'Primary',

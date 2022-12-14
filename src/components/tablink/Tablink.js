@@ -2,11 +2,20 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import HomeIcon from 'assets/homeIcon.svg'
+import HomeIcon from 'assets/svg/homeIcon.svg'
 
 import stl from './Tablink.module.scss'
 
-const Tablink = ({ variant, bgColor, link, icon, customClass }) => {
+const Tablink = ({
+  icon,
+  label,
+  type,
+  variant,
+  bgColor,
+  link,
+  onClick,
+  customClass,
+}) => {
   return (
     <Link href={link}>
       <div className={clsx(stl.container, customClass)}>
@@ -22,6 +31,7 @@ Tablink.defaultProps = {
   bgColor: '#1b74e4',
   link: '',
   icon: <HomeIcon />,
+  onClick: () => console.log('Clicked...'),
 }
 
 Tablink.propTypes = {
@@ -29,6 +39,9 @@ Tablink.propTypes = {
   bgColor: PropTypes.string,
   link: PropTypes.string,
   icon: PropTypes.node,
+  label: PropTypes.string,
+  type: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 export default Tablink

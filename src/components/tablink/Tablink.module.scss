@@ -1,13 +1,14 @@
 @import 'styles/colors';
 @import 'styles/common';
 
-.container {
+.noLabel {
   position: relative;
   width: 130px;
   height: 56px;
   padding: 3px;
+  user-select: none;
 
-  .icon {
+  .content {
     @extend .flexCenter;
     height: 54px;
   }
@@ -30,6 +31,64 @@
   border-radius: 10px;
 
   &:hover {
-    background: $veryLightGray;
+    background: $veryLightGray1;
+  }
+}
+
+.labeledPrimary,
+.labeledSecondary {
+  height: 40px;
+  @extend .flexCenter;
+  padding: 5px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .content {
+    @extend .flexCenter;
+    gap: 5px;
+    min-width: 235px;
+    width: 100%;
+    max-width: 320px;
+    height: 40px;
+    border-radius: 8px;
+  }
+}
+
+.labeledPrimary {
+  position: relative;
+
+  a {
+    color: $vividBlue;
+  }
+
+  svg {
+    fill: $vividBlue;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: $strongBlue;
+  }
+}
+
+.labeledSecondary {
+  a {
+    color: $text;
+  }
+
+  svg {
+    fill: $black;
+  }
+
+  &:hover {
+    .content {
+      background: $veryLightGray2;
+    }
   }
 }

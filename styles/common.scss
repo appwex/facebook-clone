@@ -8,3 +8,13 @@
   display: flex;
   align-items: center;
 }
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
