@@ -1,7 +1,7 @@
 import Stories from 'components/stories'
 import Tablink from 'components/tablink'
 
-import HomeIcon from 'assets/homeIcon.svg'
+import HomeIcon from 'assets/svg/homeIcon.svg'
 
 const tablinkPrimary = {
   arg: 'Primary',

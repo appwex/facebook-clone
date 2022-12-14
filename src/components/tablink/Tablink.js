@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import HomeIcon from 'assets/homeIcon.svg'
+import HomeIcon from 'assets/svg/homeIcon.svg'
 
 import stl from './Tablink.module.scss'
 
