@@ -13,6 +13,7 @@ const Tablink = ({
   variant,
   bgColor,
   link,
+  onClick,
   customClass,
 }) => {
   return (
@@ -30,6 +31,7 @@ Tablink.defaultProps = {
   bgColor: '#1b74e4',
   link: '',
   icon: <HomeIcon />,
+  onClick: () => console.log('Clicked...'),
 }
 
 Tablink.propTypes = {
@@ -37,6 +39,9 @@ Tablink.propTypes = {
   bgColor: PropTypes.string,
   link: PropTypes.string,
   icon: PropTypes.node,
+  label: PropTypes.string,
+  type: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 export default Tablink
