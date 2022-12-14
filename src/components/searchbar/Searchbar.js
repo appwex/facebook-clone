@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import stl from './Searchbar.module.scss'
 
-const Searchbar = ({ icon, placeholder, customClass }) => {
+const Searchbar = ({ icon, placeholder, width, customClass }) => {
   const [value, setValue] = useState('')
 
   const hideLabel = () => {

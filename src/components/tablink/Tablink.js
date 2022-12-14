@@ -17,12 +17,20 @@ const Tablink = ({
   customClass,
 }) => {
   return (
-    <Link href={link}>
-      <div className={clsx(stl.container, customClass)}>
-        <div className={clsx(stl.icon, stl[variant])}>{icon}</div>
+    <div
+      onClick={() => {
+        onClick()
+      }}
+      className={clsx(stl[type], customClass)}
+    >
+      <Link href={link}>
+        <div className={clsx(stl.content, stl[variant])}>
+          {icon}
+          {label}
+        </div>
         <div style={{ background: bgColor }} className={stl.borderBot}></div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 

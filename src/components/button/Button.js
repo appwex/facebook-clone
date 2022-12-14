@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
-import AddIcon from 'assets/plus.svg'
+import AddIcon from 'assets/svg/plus.svg'
 
 import stl from './Button.module.scss'
 
@@ -11,7 +11,7 @@ const Button = ({ variant, icon, label, onClick, customClass }) => {
       onClick={() => {
         onClick()
       }}
-      className={clsx(stl.container, stl[`${variant}`], customClass)}
+      className={clsx(stl.container, stl[variant], customClass)}
     >
       <div className={stl.icon}>{icon}</div>
       <div className={stl.label}>{label}</div>

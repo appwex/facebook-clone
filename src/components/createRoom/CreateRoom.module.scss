@@ -1,0 +1,95 @@
+@import 'styles/colors';
+@import 'styles/common';
+
+.createRoom {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  height: 64px;
+  @extend .flexAlignCen;
+  background: $white;
+  border-radius: 8px;
+  @extend .boxShadow;
+  font-family: Helvetica, Arial, sans-serif;
+  user-select: none;
+
+  .container {
+    padding: 8px 0;
+    @extend .flexAlignCen;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .prevBtn,
+    .nextBtn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      min-width: 48px;
+      height: 48px;
+      @extend .flexCenter;
+      background: $white;
+      border-radius: 50%;
+      box-shadow: 0px 0px 2px $veryDarkGrayishBlue;
+      cursor: pointer;
+      opacity: 0;
+      z-index: -5;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: $veryDarkGrayishBlue;
+      }
+    }
+
+    .prevBtn {
+      left: 2.3%;
+    }
+
+    .nextBtn {
+      right: 2.3%;
+    }
+
+    .leftSpan {
+      min-width: 16px;
+      height: 40px;
+    }
+
+    .btn {
+      min-width: 130px;
+      height: 12px;
+      padding: 12px;
+      margin-right: 8px;
+      @extend .flexCenter;
+      gap: 5px;
+      color: $vividBlue;
+      border: 2px solid $veryPaleBlue;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background: $veryLightGray2;
+      }
+    }
+
+    .avatars {
+      min-width: 48px;
+      height: 40px;
+      margin-right: 8px;
+    }
+
+    .showPrevBtn {
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .showNextBtn {
+      z-index: 1;
+      opacity: 1;
+    }
+  }
+}
