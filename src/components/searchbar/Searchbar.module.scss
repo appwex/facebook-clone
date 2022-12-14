@@ -1,0 +1,37 @@
+@import '../../../styles/colors.module.scss';
+@import '../../../styles/common.module.scss';
+
+.container {
+  width: 280px;
+  height: 40px;
+  display: flex;
+  border-radius: 50px;
+  background: $lightGrayishBlue;
+  padding: 0 5px;
+
+  label {
+    transition: all 0.3s;
+    @extend .flexAlignCen;
+    justify-content: flex-end;
+    width: 28px;
+    height: 40px;
+
+    svg {
+      fill: $darkGrayishBlue;
+    }
+  }
+
+  input {
+    all: unset;
+    width: 100%;
+    padding: 0 8px;
+
+    &::placeholder {
+      color: $veryDarkGrayishCyan;
+    }
+
+    &::-webkit-search-cancel-button {
+      cursor: pointer;
+    }
+  }
+}
