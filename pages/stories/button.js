@@ -18,10 +18,7 @@ const buttonSecondary = {
 }
 
 const ButtonStory = () => (
-  <Stories
-    argList={[buttonPrimary, buttonSecondary]}
-    template={(args) => <Button {...args} />}
-  />
+  <Stories argList={[buttonPrimary, buttonSecondary]} template={Button} />
 )
 
 export default ButtonStory

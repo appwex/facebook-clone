@@ -10,7 +10,7 @@ const Tablink = ({ variant, bgColor, link, icon, customClass }) => {
   return (
     <Link href={`${link}`}>
       <div className={clsx(stl.container, customClass)}>
-        <div className={clsx(stl.icon, stl[`${variant}`])}>{icon}</div>
+        <div className={clsx(stl.icon, stl[variant])}>{icon}</div>
         <div style={{ background: bgColor }} className={stl.borderBot}></div>
       </div>
     </Link>
