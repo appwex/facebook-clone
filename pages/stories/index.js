@@ -9,6 +9,7 @@ const StoriesLinks = () => (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Link href="/stories/tablink">Tab Link</Link>
 =======
 >>>>>>> 3676363 (Add Button Component)
@@ -18,6 +19,9 @@ const StoriesLinks = () => (
 >>>>>>> 2f3533d (Add Searchbar Component)
 =======
 >>>>>>> ef7cf4b (Add Button Component)
+=======
+    <Link href="/stories/tablink">Tablink</Link>
+>>>>>>> 2c5db88 (Add Tablink Component)
   </div>
 )
 
