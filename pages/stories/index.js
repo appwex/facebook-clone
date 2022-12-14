@@ -17,6 +17,7 @@ const StoriesLinks = () => (
     <Link href="/stories/tablink">Tablink</Link>
     <Link href="/stories/searchbar">Searchbar</Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2f3533d (Add Searchbar Component)
 =======
 >>>>>>> ef7cf4b (Add Button Component)
@@ -25,6 +26,9 @@ const StoriesLinks = () => (
 >>>>>>> 2c5db88 (Add Tablink Component)
 =======
 >>>>>>> f13aa6f (Add Searchbar Component)
+=======
+    <Link href="/stories/menuItems">Menu Items</Link>
+>>>>>>> 9bcbf72 (Add Menu Items Component)
   </div>
 )
 
