@@ -8,6 +8,7 @@ const StoriesLinks = () => (
     <Link href="/stories/button">Button</Link>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Link href="/stories/tablink">Tab Link</Link>
 =======
 >>>>>>> 3676363 (Add Button Component)
@@ -15,6 +16,8 @@ const StoriesLinks = () => (
     <Link href="/stories/tablink">Tablink</Link>
     <Link href="/stories/searchbar">Searchbar</Link>
 >>>>>>> 2f3533d (Add Searchbar Component)
+=======
+>>>>>>> ef7cf4b (Add Button Component)
   </div>
 )
 
