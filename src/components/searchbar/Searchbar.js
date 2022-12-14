@@ -1,11 +1,14 @@
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
-import SearchIcon from '../../assets/searchIcon.svg'
+import SearchIcon from 'assets/search-icon.svg'
 
 import stl from './Searchbar.module.scss'
 
 const Searchbar = ({ icon, placeholder, customClass }) => {
+  const [value, setValue] = useState('')
+
   const hideLabel = () => {
     const label = document.getElementById('label')
     label.style.width = '0'
@@ -26,6 +29,8 @@ const Searchbar = ({ icon, placeholder, customClass }) => {
         id="search"
         name="search"
         placeholder={placeholder}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
         onFocus={hideLabel}
         onBlur={showLabel}
       />
