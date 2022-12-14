@@ -25,9 +25,11 @@ const postBox = {
     <IconButton
       variant="secondary"
       customClass={stl.button}
+      bgColor="none"
       icon={<MoreIcon />}
     />,
     <IconButton
+      bgColor="none"
       variant="secondary"
       customClass={stl.button}
       icon={<CloseIcon />}

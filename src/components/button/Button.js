@@ -11,7 +11,7 @@ const Button = ({ variant, icon, label, onClick, customClass }) => {
       onClick={() => {
         onClick()
       }}
-      className={clsx(stl.container, stl[`${variant}`], customClass)}
+      className={clsx(stl.container, stl[variant], customClass)}
     >
       <div className={stl.icon}>{icon}</div>
       <div className={stl.label}>{label}</div>

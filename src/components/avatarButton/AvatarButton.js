@@ -19,10 +19,10 @@ const AvatarButton = ({
         onClick()
       }}
       style={{ width: width, height: height }}
-      className={clsx(stl.container, stl[`${variant}`], cusomClass)}
+      className={clsx(stl.container, stl[variant], cusomClass)}
     >
       <div>
-        <Image src={`${imgSrc}`} width="40" height="40" alt={alt} />
+        <Image src={imgSrc} width="40" height="40" alt={alt} />
       </div>
     </div>
   )
