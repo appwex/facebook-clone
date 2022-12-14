@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
-import AddIcon from 'assets/plus.svg'
+import AddIcon from 'assets/svg/plus.svg'
 
 import stl from './Button.module.scss'
 
