@@ -6,7 +6,15 @@ import HomeIcon from 'assets/svg/homeIcon.svg'
 
 import stl from './Tablink.module.scss'
 
-const Tablink = ({ variant, bgColor, link, icon, customClass }) => {
+const Tablink = ({
+  icon,
+  label,
+  type,
+  variant,
+  bgColor,
+  link,
+  customClass,
+}) => {
   return (
     <Link href={link}>
       <div className={clsx(stl.container, customClass)}>
