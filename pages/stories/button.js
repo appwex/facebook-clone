@@ -1,7 +1,7 @@
 import Stories from '../../src/components/stories'
 import Button from '../../src/components/button'
 
-import AddIcon from '../../src/assets/addIcon.svg'
+import AddIcon from '../../src/assets/plus.svg'
 
 const buttonPrimary = {
   arg: 'Primary',
