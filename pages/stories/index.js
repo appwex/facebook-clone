@@ -9,6 +9,7 @@ const StoriesLinks = () => (
     <Link href="/stories/tablink">Tab Link</Link>
     <Link href="/stories/searchbar">Searchbar</Link>
     <Link href="/stories/menuItems">Menu Items</Link>
+    <Link href="/stories/avatarButton">Avatar Button</Link>
   </div>
 )
 
