@@ -26,6 +26,11 @@
   align-items: flex-start;
 }
 
+.justifyEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .divider {
   border-top: 1px solid $lightGrayishBlue;
 }
@@ -36,4 +41,8 @@
 
 .cardBoxShadow {
   box-shadow: 0 12px 28px 0 $shadow2, 0 2px 4px 0 $shadow1;
+}
+
+.dropDownShadow {
+  box-shadow: 0 12px 28px 0 $boxShadow2, 0 2px 4px 0 $boxShadow;
 }
