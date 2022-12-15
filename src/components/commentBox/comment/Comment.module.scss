@@ -1,0 +1,44 @@
+@import 'styles/colors';
+@import 'styles/common';
+
+.container {
+  width: 100%;
+  max-width: 680px;
+  padding-right: 16px;
+  display: flex;
+  font-family: Helvetica, Arial, sans-serif;
+
+  .content {
+    padding-left: 16px;
+    max-width: 89%;
+
+    .comment {
+      max-width: 100%;
+      padding: 8px 12px;
+      @extend .flexCol;
+      justify-content: center;
+      color: $primaryText;
+      background: $lightGrayishBlue2;
+      border-radius: 18px;
+
+      .name {
+        word-wrap: break-word;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        user-select: none;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .desc {
+        word-wrap: break-word;
+        unicode-bidi: isolate;
+        font-size: 0.9375rem;
+        font-weight: 400;
+      }
+    }
+  }
+}

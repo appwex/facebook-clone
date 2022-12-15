@@ -1,13 +1,19 @@
-import { use, useState } from 'react'
+import PropTypes from 'prop-types'
+import { useState, useRef } from 'react'
+import clsx from 'clsx'
+
+import useOnClickOutside from 'lib/hook'
 
 import OpenMenu from 'assets/svg/openCommOptIcon.svg'
 import HookIcon from 'assets/svg/hookIcon.svg'
 
 import stl from './CommentMenu.module.scss'
 
-const CommentMenu = () => {
+const CommentMenu = ({ handleClick, cusomClass }) => {
   const [name, setName] = useState('Top comments')
   const [isOpen, setIsOpen] = useState(false)
+
+  const ref = useRef()
 
   if (typeof window !== 'undefined') {
     const optMenu = document.getElementById('optMenu')
@@ -18,14 +24,20 @@ const CommentMenu = () => {
     }
   }
 
+  const hide = () => {
+    setIsOpen(false)
+  }
+
+  useOnClickOutside(hide, ref)
+
   return (
-    <div className={stl.container}>
+    <div ref={ref} className={clsx(stl.container, cusomClass)}>
       <div
         onClick={() => {
           if (!isOpen) {
             setIsOpen(true)
           } else {
-            setIsOpen(false)
+            hide()
           }
         }}
         className={stl.heading}
@@ -38,7 +50,8 @@ const CommentMenu = () => {
         <div
           onClick={() => {
             setName('Top comments')
-            setIsOpen(false)
+            hide()
+            handleClick('top')
           }}
           className={stl.option}
         >
@@ -50,7 +63,8 @@ const CommentMenu = () => {
         <div
           onClick={() => {
             setName('Most recent')
-            setIsOpen(false)
+            hide()
+            handleClick('most')
           }}
           className={stl.option}
         >
@@ -60,7 +74,8 @@ const CommentMenu = () => {
         <div
           onClick={() => {
             setName('All comments')
-            setIsOpen(false)
+            hide()
+            handleClick('all')
           }}
           className={stl.option}
         >
@@ -72,6 +87,14 @@ const CommentMenu = () => {
       </div>
     </div>
   )
+}
+
+CommentMenu.defaultProps = {
+  handleClick: (val) => console.log(val),
+}
+
+CommentMenu.propTypes = {
+  handleClick: PropTypes.func,
 }
 
 export default CommentMenu

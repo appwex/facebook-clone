@@ -60,11 +60,15 @@ const PostBox = ({
       </div>
       <div id="message" className={stl.message}>
         {msgContent.map((msg, i) => {
-          return (
-            <span key={i} className={stl.msgContent}>
-              {msg}
-            </span>
-          )
+          if (msg === '') {
+            return <br key={i} />
+          } else {
+            return (
+              <span key={i} className={stl.msgContent}>
+                {msg}
+              </span>
+            )
+          }
         })}
       </div>
       <div
