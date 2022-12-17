@@ -29,3 +29,13 @@
     gap: 10px;
   }
 }
+
+.listLi {
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background: $veryLightGray2;
+  }
+}

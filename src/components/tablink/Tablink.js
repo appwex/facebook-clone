@@ -50,6 +50,7 @@ Tablink.propTypes = {
   label: PropTypes.string,
   type: PropTypes.string,
   onClick: PropTypes.func,
+  customClass: PropTypes.string,
 }
 
 export default Tablink

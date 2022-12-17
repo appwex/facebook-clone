@@ -14,6 +14,7 @@ const StoriesLinks = () => (
     <Link href="/stories/postSettingsMenu">Post Settings Menu</Link>
     <Link href="/stories/postBox">Post Box</Link>
     <Link href="/stories/createRoom">Create Room</Link>
+    <Link href="/stories/dropdown">Dropdown</Link>
   </div>
 )
 

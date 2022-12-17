@@ -53,6 +53,7 @@ AddPostManager.propTypes = {
   avatar: PropTypes.node,
   input: PropTypes.node,
   buttons: PropTypes.array,
+  customClass: PropTypes.string,
 }
 
 export default AddPostManager

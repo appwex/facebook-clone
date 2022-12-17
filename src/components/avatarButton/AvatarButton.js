@@ -42,6 +42,7 @@ AvatarButton.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   onClick: PropTypes.func,
+  cusomClass: PropTypes.string,
 }
 
 export default AvatarButton

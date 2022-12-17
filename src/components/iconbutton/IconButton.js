@@ -28,6 +28,7 @@ IconButton.propTypes = {
   variant: PropTypes.string,
   icon: PropTypes.node,
   onClick: PropTypes.func,
+  customClass: PropTypes.string,
 }
 
 export default IconButton

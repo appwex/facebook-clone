@@ -31,6 +31,7 @@ Button.propTypes = {
   icon: PropTypes.node,
   label: PropTypes.string,
   onClick: PropTypes.func,
+  customClass: PropTypes.string,
 }
 
 export default Button

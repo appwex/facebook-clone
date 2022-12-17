@@ -1,0 +1,62 @@
+@import 'styles/colors';
+@import 'styles/common';
+
+.container {
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+
+  .label {
+    width: max-content;
+    padding: 5px 8px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .dropDown {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    min-width: 300px;
+    min-height: 150px;
+    list-style: none;
+    background: $white;
+    border-radius: 8px;
+    @extend .cardBoxShadow;
+    padding: 8px;
+    user-select: none;
+    display: none;
+
+    .hook {
+      position: absolute;
+      fill: $white;
+      top: -4%;
+      right: 48%;
+      top: -6%;
+      transform: rotate(180deg);
+      display: none;
+    }
+  }
+
+  .dropDownHook {
+    margin: 1rem 0;
+
+    .hook {
+      display: block;
+    }
+  }
+
+  .up {
+    bottom: 100%;
+
+    .hook {
+      transform: rotate(0deg);
+      top: 99%;
+      left: 48%;
+    }
+  }
+
+  .showDropdown {
+    display: block;
+  }
+}

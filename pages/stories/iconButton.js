@@ -17,7 +17,7 @@ const iconButtonSecondary = {
 const IconButtonStory = () => (
   <Stories
     argList={[iconButtonPrimary, iconButtonSecondary]}
-    template={(args) => <IconButton {...args} />}
+    template={IconButton}
   />
 )
 

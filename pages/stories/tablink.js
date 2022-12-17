@@ -45,7 +45,7 @@ const TablinkStory = () => (
       tablinkLabeledPrimary,
       tablinkLabeledSecondary,
     ]}
-    template={(args) => <Tablink {...args} />}
+    template={Tablink}
   />
 )
 

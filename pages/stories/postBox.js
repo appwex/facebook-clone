@@ -70,8 +70,6 @@ const postBox = {
   ],
 }
 
-const PostBoxStory = () => (
-  <Stories argList={[postBox]} template={(args) => <PostBox {...args} />} />
-)
+const PostBoxStory = () => <Stories argList={[postBox]} template={PostBox} />
 
 export default PostBoxStory

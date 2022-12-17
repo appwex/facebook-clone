@@ -6,10 +6,7 @@ const postSetMenu = {
 }
 
 const PostSetMenuStory = () => (
-  <Stories
-    argList={[postSetMenu]}
-    template={(args) => <PostSetMenu {...args} />}
-  />
+  <Stories argList={[postSetMenu]} template={PostSetMenu} />
 )
 
 export default PostSetMenuStory

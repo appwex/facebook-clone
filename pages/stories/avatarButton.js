@@ -22,7 +22,7 @@ const avatarButtonBordered = {
 const AvatarButtonStory = () => (
   <Stories
     argList={[avatarButton, avatarButtonStatus, avatarButtonBordered]}
-    template={(args) => <AvatarButton {...args} />}
+    template={AvatarButton}
   />
 )
 
