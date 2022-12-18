@@ -4,12 +4,12 @@
 .container {
   width: 100%;
   max-width: 680px;
-  padding-right: 16px;
+  padding: 0 16px;
   display: flex;
+  gap: 7px;
   font-family: Helvetica, Arial, sans-serif;
 
   .content {
-    padding-left: 16px;
     max-width: 89%;
 
     .comment {
@@ -38,6 +38,51 @@
         unicode-bidi: isolate;
         font-size: 0.9375rem;
         font-weight: 400;
+      }
+    }
+
+    .reactComm {
+      margin-left: 13px;
+      padding-top: 3px;
+      display: flex;
+      gap: 1rem;
+
+      .reactItem,
+      .commInfo {
+        font-weight: bold;
+        font-size: 0.8125rem;
+        color: $secondaryText;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .commInfo {
+        font-weight: normal;
+      }
+    }
+
+    .replied {
+      font-size: 0.9375rem;
+      font-weight: bold;
+      color: $secondaryText;
+      margin-left: 13px;
+      padding-right: 32px;
+      height: 32px;
+      @extend .flexAlignCen;
+      gap: 7px;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      svg {
+        fill: $secondaryText;
       }
     }
   }

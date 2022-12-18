@@ -1,8 +1,18 @@
 import AvatarButton from 'components/avatarButton'
 
+import ReplyIcon from 'assets/svg/replyIcon.svg'
+
 import stl from './Comment.module.scss'
 
-const Comment = ({ name, description, customClass }) => {
+const Comment = ({
+  name,
+  description,
+  reactComm,
+  commentInfo,
+  handleCommentReact,
+  numOfReplies,
+  customClass,
+}) => {
   const text = description.split('\n')
 
   return (
@@ -25,6 +35,44 @@ const Comment = ({ name, description, customClass }) => {
             }
           })}
         </div>
+        <div className={stl.reactComm}>
+          {reactComm.map((react, i) => {
+            return (
+              <div
+                onClick={() => {
+                  handleCommentReact()
+                }}
+                key={i}
+                className={stl.reactItem}
+              >
+                {react}
+              </div>
+            )
+          })}
+          {commentInfo.map((info, i) => {
+            return (
+              <div
+                onClick={() => {
+                  handleCommentReact()
+                }}
+                key={i}
+                className={stl.commInfo}
+              >
+                {info}
+              </div>
+            )
+          })}
+        </div>
+        <div
+          onClick={() => {
+            console.log('Clicked...')
+          }}
+          className={stl.replied}
+        >
+          <ReplyIcon />
+          {numOfReplies}
+        </div>
+        <div className={stl.nestComment}></div>
       </div>
     </div>
   )
