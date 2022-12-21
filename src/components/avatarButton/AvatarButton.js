@@ -8,6 +8,7 @@ const AvatarButton = ({
   imgSrc,
   variant,
   alt,
+  minWidth,
   width,
   height,
   onClick,
@@ -18,7 +19,7 @@ const AvatarButton = ({
       onClick={() => {
         onClick()
       }}
-      style={{ width: width, height: height }}
+      style={{ minWidth: minWidth, width: width, height: height }}
       className={clsx(stl.container, stl[variant], cusomClass)}
     >
       <div>
@@ -40,6 +41,7 @@ AvatarButton.propTypes = {
   variant: PropTypes.string,
   alt: PropTypes.string,
   width: PropTypes.string,
+  minWidth: PropTypes.string,
   height: PropTypes.string,
   onClick: PropTypes.func,
   cusomClass: PropTypes.string,
