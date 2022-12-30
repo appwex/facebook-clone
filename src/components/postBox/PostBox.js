@@ -141,6 +141,7 @@ PostBox.propTypes = {
   handleShare: PropTypes.func,
   handleReacted: PropTypes.func,
   interactOpt: PropTypes.array,
+  customClass: PropTypes.string,
 }
 
 export default PostBox

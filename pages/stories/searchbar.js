@@ -10,7 +10,7 @@ const searchbar = {
 }
 
 const SearchbarStory = () => (
-  <Stories argList={[searchbar]} template={(args) => <Searchbar {...args} />} />
+  <Stories argList={[searchbar]} template={Searchbar} />
 )
 
 export default SearchbarStory

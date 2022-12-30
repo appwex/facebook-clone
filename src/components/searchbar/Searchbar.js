@@ -45,6 +45,7 @@ Searchbar.propTypes = {
   icon: PropTypes.node,
   placeholder: PropTypes.string,
   width: PropTypes.string,
+  customClass: PropTypes.string,
 }
 
 export default Searchbar

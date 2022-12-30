@@ -24,10 +24,7 @@ const createRoom = {
 }
 
 const CreateRoomStory = () => (
-  <Stories
-    argList={[createRoom]}
-    template={(args) => <CreateRoom {...args} />}
-  />
+  <Stories argList={[createRoom]} template={CreateRoom} />
 )
 
 export default CreateRoomStory

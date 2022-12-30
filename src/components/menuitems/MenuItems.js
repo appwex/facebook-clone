@@ -32,6 +32,7 @@ MenuItems.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   onClick: PropTypes.func,
+  customClass: PropTypes.string,
 }
 
 export default MenuItems

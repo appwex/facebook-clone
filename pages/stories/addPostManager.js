@@ -29,10 +29,7 @@ const addPostManager = {
 }
 
 const AddPostManagerStory = () => (
-  <Stories
-    argList={[addPostManager]}
-    template={(args) => <AddPostManager {...args} />}
-  />
+  <Stories argList={[addPostManager]} template={AddPostManager} />
 )
 
 export default AddPostManagerStory

@@ -10,7 +10,7 @@ const menuItems = {
 }
 
 const MenuItemsStory = () => (
-  <Stories argList={[menuItems]} template={(args) => <MenuItems {...args} />} />
+  <Stories argList={[menuItems]} template={MenuItems} />
 )
 
 export default MenuItemsStory

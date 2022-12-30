@@ -107,6 +107,7 @@ CreateRoom.defaultProps = {
 CreateRoom.propTypes = {
   profiles: PropTypes.array,
   handleCreateRoom: PropTypes.func,
+  customClass: PropTypes.string,
 }
 
 export default CreateRoom
