@@ -18,6 +18,7 @@ const StoriesLinks = () => (
     <Link href="/stories/comment">Comment Menu</Link>
     <Link href="/stories/dropDown">Dropdown</Link>
     <Link href="/stories/comment">Comment</Link>
+    <Link href="/stories/enterComment">EnterComment</Link>
   </div>
 )
 
