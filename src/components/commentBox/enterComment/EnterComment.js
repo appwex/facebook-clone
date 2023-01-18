@@ -28,7 +28,7 @@ const EnterComment = ({
     const ele = e.target
     ele.style.height = '25px'
     if (ele.scrollHeight > '20') {
-      ele.style.height = ele.scrollHeight + 'px'
+      ele.style.height = 10 + ele.scrollHeight + 'px'
     }
 
     e.key === 'Enter' &&
@@ -40,25 +40,19 @@ const EnterComment = ({
     }
   }
 
-  if (typeof window !== 'undefined') {
-    const ele = document.getElementById('textArea')
-    console.log(ele.offsetWidth)
-  }
-
   return (
     <div className={clsx(stl.enterComment, customClass)}>
       <div className={stl.container}>
         {avatarBtn}
         <div className={stl.input}>
           <textarea
-            cols="72"
             id="textArea"
             name="enterComment"
             onKeyDown={handleKeyDown}
             placeholder={placeholder}
             onChange={(e) => setCommentVal(e.target.value)}
           ></textarea>
-          <div className={stl.insert}>
+          <div id="insert" className={stl.insert}>
             <div onClick={addAvatarHandler} className={stl.insertBtn}>
               <InsertAvatarIcon />
             </div>
