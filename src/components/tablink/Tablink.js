@@ -23,7 +23,7 @@ const Tablink = ({
       }}
       className={clsx(stl[type], customClass)}
     >
-      <Link href={link}>
+      <Link href={`${link}`}>
         <div className={clsx(stl.content, stl[variant])}>
           {icon}
           {label}

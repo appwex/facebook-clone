@@ -8,20 +8,39 @@
   position: relative;
   z-index: 0;
 
+  .treeJoint,
+  .treeJoint2,
+  .treeJoint3 {
+    position: absolute;
+    width: 24px;
+    height: 20px;
+    border-bottom-width: 2px;
+    border-bottom-left-radius: 10px;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-left-width: 2px;
+    border-color: $lightGrayishBlue2;
+    left: -37px;
+  }
+
+  .treeLine {
+    position: absolute;
+    height: calc(100% - 43px);
+    left: -42%;
+    background: $lightGrayishBlue2;
+    width: 2px;
+    margin-left: 47%;
+    z-index: -1;
+  }
+
+  .long {
+    height: calc(100% - 55px);
+  }
+
   .row {
     display: flex;
     gap: 5px;
     padding: 0 16px;
-
-    .treeLine {
-      position: absolute;
-      height: calc(100% - 40px);
-      left: -42%;
-      background: $lightGrayishBlue2;
-      width: 2px;
-      margin-left: 47%;
-      z-index: -1;
-    }
   }
 
   .content {
@@ -113,24 +132,7 @@
     padding-left: 2.8rem;
     height: 100%;
 
-    .treeJoint,
-    .treeJoint2,
-    .treeJoint3 {
-      position: absolute;
-      bottom: 20px;
-      left: -44px;
-      width: 24px;
-      border-left: solid;
-      border-bottom: solid;
-      border-left-width: 2px;
-      border-bottom-width: 2px;
-      border-color: $lightGrayishBlue2;
-      border-bottom-left-radius: 10px;
-      height: 20px;
-    }
-
     .replied {
-      position: relative;
       width: 94%;
       height: 37px;
       @extend .flexAlignCen;
@@ -147,12 +149,20 @@
         text-decoration: underline;
       }
 
+      .treeJoint2 {
+        left: 34px;
+        bottom: 20px;
+      }
+
       svg {
         fill: $secondaryText;
       }
     }
 
-    .nestComents {
+    .nestComments {
+      @extend .flexCol;
+      gap: 10px;
+      margin: 10px 0;
       height: 100%;
       max-width: 635px;
 
@@ -162,7 +172,7 @@
       }
 
       .treeJoint3 {
-        left: 5%;
+        left: 36px;
       }
 
       .nestComm {
@@ -192,10 +202,12 @@
         }
       }
 
-      .enterComm {
-        display: flex;
-        gap: 5px;
-        margin-left: 5%;
+      .enterComment {
+        margin-left: 4%;
+
+        .treeJoint3 {
+          left: 34px;
+        }
       }
     }
   }

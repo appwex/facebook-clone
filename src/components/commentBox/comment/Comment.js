@@ -1,36 +1,43 @@
+import PropTypes from 'prop-types'
 import clsx from 'clsx'
+
+import AvatarButton from 'components/avatarButton'
 
 import ReplyIcon from 'assets/svg/replyIcon.svg'
 import MoreIcon from 'assets/svg/moreIcon2.svg'
 
 import stl from './Comment.module.scss'
+import { useState } from 'react'
+import EnterComment from '../enterComment'
 
 const Comment = ({
   maxWidth,
+  treejoint,
+  treeline,
   avatar,
   name,
   description,
   reactComm,
   commentInfo,
   handleCommentReact,
+  handleCommentInfo,
   numOfReplies,
-  handleReply,
   repliedComms,
-  treeLineVar,
-  treeJointVar,
-  treeJointVar2,
-  myAvatar,
-  commentInput,
   customClass,
 }) => {
   const text = description.split('\n')
 
+  const [showReplied, setShowReplied] = useState(false)
+  const [treeLine, setTreeLine] = useState('')
+
   return (
-    <div style={{ maxWidth: maxWidth }} className={stl.container}>
+    <div
+      style={{ maxWidth: maxWidth }}
+      className={clsx(stl.container, customClass)}
+    >
+      {treejoint && <div className={stl.treeJoint}></div>}
+      {treeline && <div className={clsx(stl.treeLine, stl[treeLine])}></div>}
       <div className={stl.row}>
-        {typeof numOfReplies !== 'undefined' && (
-          <div className={clsx(stl.treeLine, stl[treeLineVar])}></div>
-        )}
         {avatar}
         <div className={stl.content}>
           <div className={stl.comment}>
@@ -53,7 +60,7 @@ const Comment = ({
                 return (
                   <div
                     onClick={() => {
-                      handleCommentReact()
+                      handleCommentReact(react)
                     }}
                     key={i}
                     className={stl.reactItem}
@@ -68,7 +75,7 @@ const Comment = ({
                 return (
                   <div
                     onClick={() => {
-                      handleCommentReact()
+                      handleCommentInfo(info)
                     }}
                     key={i}
                     className={stl.commInfo}
@@ -86,25 +93,37 @@ const Comment = ({
         </div>
       </div>
       <div className={stl.nest}>
-        {typeof numOfReplies !== 'undefined' && (
-          <div onClick={handleReply} className={stl.replied}>
+        {typeof numOfReplies !== 'undefined' && showReplied === false && (
+          <div
+            onClick={() => {
+              if (showReplied === false) {
+                setShowReplied(true)
+                setTreeLine('long')
+              } else {
+                setShowReplied(false)
+              }
+            }}
+            className={stl.replied}
+          >
+            <div className={stl.treeJoint2}></div>
             <ReplyIcon />
             {numOfReplies}
-            <div className={clsx(stl.treeJoint, stl[treeJointVar])}></div>
           </div>
         )}
-        {typeof repliedComms !== 'undefined' && (
-          <div className={stl.nestComents}>
-            {repliedComms.map((comm, i) => (
+        {typeof repliedComms !== 'undefined' && showReplied && (
+          <div className={stl.nestComments}>
+            {repliedComms.map((data, i) => (
               <div key={i} className={stl.nestComm}>
-                <div className={clsx(stl.treeJoint2, stl[treeJointVar2])}></div>
-                {comm}
+                {data}
               </div>
             ))}
-            <div className={stl.treeJoint3}></div>
-            <div className={stl.enterComm}>
-              <div className={stl.myAvatart}>{myAvatar}</div>{' '}
-              <div className={stl.input}>{commentInput}</div>
+            <div className={stl.enterComment}>
+              <div className={stl.treeJoint3}></div>
+              <EnterComment
+                avatarBtn={
+                  <AvatarButton minWidth="30px" width="30px" height="30px" />
+                }
+              />
             </div>
           </div>
         )}
@@ -113,6 +132,34 @@ const Comment = ({
   )
 }
 
-Comment.defaultProps = {}
+const description =
+  'Id esse veniam deserunt fugiat reprehenderit pariatur pariatur. Aliquip Lorem commodo elit deserunt non reprehenderit ad proident non incididunt consectetur veniam ea duis. Nulla ex duis proident laborum eiusmod dolore duis dolore proident aliquip culpa non exercitation eiusmod. 😁 '
+
+Comment.defaultProps = {
+  avatar: <AvatarButton minWidth="40px" />,
+  name: 'John Doe',
+  description: description,
+  reactComm: ['Like', 'Reply', 'Share'],
+  commentInfo: ['4h', 'Edited'],
+  handleCommentReact: (react) => console.log('Clicked...', react),
+  handleCommentInfo: (info) => console.log('Clicked...', info),
+  handleReply: () => console.log('Clicked...'),
+}
+
+Comment.propTypes = {
+  maxWidth: PropTypes.string,
+  treejoint: PropTypes.bool,
+  treeline: PropTypes.bool,
+  avatar: PropTypes.node,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  reactComm: PropTypes.array,
+  commentInfo: PropTypes.array,
+  handleCommentReact: PropTypes.func,
+  handleCommentInfo: PropTypes.func,
+  numOfReplies: PropTypes.string,
+  repliedComms: PropTypes.array,
+  customClass: PropTypes.string,
+}
 
 export default Comment

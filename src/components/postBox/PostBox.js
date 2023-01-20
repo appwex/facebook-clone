@@ -35,7 +35,7 @@ const PostBox = ({
       <div className={stl.header}>
         <AvatarButton width="100%" imgSrc={imgSrc} />
         <div className={stl.headerContent}>
-          <Link href={titleLink}>
+          <Link href={`${titleLink}`}>
             <h4>{title}</h4>
           </Link>
           <div className={stl.detail}>

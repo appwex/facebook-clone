@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
+import AvatarButton from 'components/avatarButton'
+
 import InsertAvatarIcon from 'assets/svg/insertAvatarIcon.svg'
 import InsertEmojiIcon from 'assets/svg/insertEmojiIcon.svg'
 import InsertPhotoIcon from 'assets/svg/insertPhotoVideoIcon.svg'
@@ -77,6 +79,7 @@ const EnterComment = ({
 }
 
 EnterComment.defaultProps = {
+  avatarBtn: <AvatarButton width="36px" height="35px" />,
   placeholder: 'Write a public comment...',
   addAvatarHandler: () => console.log('Clicked...', 'addAvatar'),
   addEmojiHandler: () => console.log('Clicked...', 'addEmoji'),
@@ -84,9 +87,11 @@ EnterComment.defaultProps = {
   addPhotoHandler: () => console.log('Clicked...', 'addPhoto'),
   addStickerHandler: () => console.log('Clicked...', 'addSticker'),
   label: 'Press Enter to post.',
+  handleEnterKey: (commentVal) => console.log(commentVal),
 }
 
 EnterComment.propTypes = {
+  avatarBtn: PropTypes.node,
   placeholder: PropTypes.string,
   handleEnterKey: PropTypes.func,
   addAvatarHandler: PropTypes.func,
