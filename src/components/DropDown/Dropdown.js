@@ -25,6 +25,8 @@ const Dropdown = ({
   hookRight,
   hookBottom,
   hookLeft,
+  closeOnClickAway,
+  showDropdown,
   customClass,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,34 +34,41 @@ const Dropdown = ({
   const ref = useRef()
 
   if (typeof window !== 'undefined') {
-    const dropDown = document.getElementById('dropDown')
-    if (hasHook === true) {
-      dropDown.classList.add(stl.dropDownHook)
-    }
+    setTimeout(() => {
+      const dropDown = document.getElementById('dropDown')
+      if (hasHook === true) {
+        dropDown.classList.add(stl.dropDownHook)
+      }
 
-    if (isOpen) {
-      dropDown.classList.add(stl.showDropdown)
-    } else {
-      dropDown.classList.remove(stl.showDropdown)
-    }
+      if (isOpen) {
+        dropDown.classList.add(stl.showDropdown)
+      } else {
+        dropDown.classList.remove(stl.showDropdown)
+      }
+
+      showDropdown === true && setIsOpen(true)
+      showDropdown === false && setIsOpen(false)
+    }, 100)
   }
 
   const hideDropdown = () => {
     setIsOpen(false)
   }
 
-  useClickOutside(hideDropdown, ref)
+  closeOnClickAway === true && useClickOutside(hideDropdown, ref)
 
   return (
     <div ref={ref} className={clsx(stl.container, customClass)}>
-      <div
-        onClick={() => {
-          setIsOpen(!isOpen)
-        }}
-        className={stl.label}
-      >
-        {label || icon}
-      </div>
+      {label !== 'noLabel' && (
+        <div
+          onClick={() => {
+            setIsOpen(!isOpen)
+          }}
+          className={stl.label}
+        >
+          {label || icon}
+        </div>
+      )}
       <div
         id="dropDown"
         style={{ top: top, right: right, bottom: bottom, left: left }}
@@ -97,7 +106,7 @@ Dropdown.defaultProps = {
 }
 
 Dropdown.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.node,
   icon: PropTypes.node,
   listDropdown: PropTypes.array,
   listClass: PropTypes.string,
@@ -113,6 +122,8 @@ Dropdown.propTypes = {
   hookRight: PropTypes.string,
   hookBottom: PropTypes.string,
   hookLeft: PropTypes.string,
+  closeOnClickAway: PropTypes.bool,
+  showDropdown: PropTypes.bool,
   customClass: PropTypes.string,
 }
 

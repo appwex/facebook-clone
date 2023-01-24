@@ -10,6 +10,7 @@ import LoveIcon from 'assets/svg/facebookLoveIcon.svg'
 import LikeIcon from 'assets/svg/facebookLikeIcon.svg'
 
 import stl from './PostBox.module.scss'
+import { useState } from 'react'
 
 const PostBox = ({
   imgSrc,
@@ -23,13 +24,16 @@ const PostBox = ({
   numOfComments,
   numOfShares,
   handleImage,
-  handleLike,
+  handleReact,
   handleComment,
   handleShare,
   handleReacted,
   interactOpt,
+  comments,
   customClass,
 }) => {
+  const [showComments, setShowComments] = useState(false)
+
   return (
     <div className={clsx(stl.container, customClass)}>
       <div className={stl.header}>
@@ -93,7 +97,7 @@ const PostBox = ({
             </span>
             <span
               onClick={() => {
-                handleLike()
+                handleReact()
               }}
               className={stl.numOfReact}
             >
@@ -103,6 +107,11 @@ const PostBox = ({
           <div className={stl.right}>
             <span
               onClick={() => {
+                if (showComments === false) {
+                  setShowComments(true)
+                } else {
+                  setShowComments(false)
+                }
                 handleComment()
               }}
             >
@@ -120,12 +129,21 @@ const PostBox = ({
         <div className={stl.divider}></div>
         <div className={stl.interactOpt}>{interactOpt.map((opt) => opt)}</div>
       </div>
+      {typeof numOfComments !== 'undefined' && showComments && (
+        <div className={stl.comments}>
+          <div className={stl.divider}></div>
+          {comments}
+        </div>
+      )}
     </div>
   )
 }
 
 PostBox.defaultProps = {
   titleLink: '',
+  handleComment: () => console.log('Clicked...'),
+  handleShare: () => console.log('Clicked...'),
+  handleReacted: () => console.log('Clicked...'),
 }
 
 PostBox.propTypes = {
@@ -140,7 +158,7 @@ PostBox.propTypes = {
   numOfComments: PropTypes.string,
   numOfShares: PropTypes.string,
   handleImage: PropTypes.func,
-  handleLike: PropTypes.func,
+  handleReact: PropTypes.func,
   handleComment: PropTypes.func,
   handleShare: PropTypes.func,
   handleReacted: PropTypes.func,

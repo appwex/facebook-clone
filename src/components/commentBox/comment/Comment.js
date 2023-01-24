@@ -9,6 +9,7 @@ import MoreIcon from 'assets/svg/moreIcon2.svg'
 import stl from './Comment.module.scss'
 import { useState } from 'react'
 import EnterComment from '../enterComment'
+import Dropdown from 'components/DropDown'
 
 const Comment = ({
   maxWidth,
@@ -17,17 +18,19 @@ const Comment = ({
   avatar,
   name,
   description,
+  dropDownOptOnClick,
   reactComm,
   commentInfo,
   handleCommentReact,
   handleCommentInfo,
   numOfReplies,
-  repliedComms,
+  repliedComments,
   customClass,
 }) => {
   const text = description.split('\n')
 
   const [showReplied, setShowReplied] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
   const [treeLine, setTreeLine] = useState('')
 
   return (
@@ -87,9 +90,33 @@ const Comment = ({
           </div>
         </div>
         <div className={stl.hideOrReport}>
-          <div id="commReportBtn" className={stl.reportBtn}>
+          <div
+            id="commReportBtn"
+            className={stl.reportBtn}
+            onClick={() => {
+              if (isOpen === false) {
+                setIsOpen(true)
+              } else if (isOpen === true) {
+                setIsOpen(false)
+              }
+            }}
+          >
             <MoreIcon />
           </div>
+          <Dropdown
+            label=""
+            listDropdown={['Hide comment', 'Report comment']}
+            liClass={stl.listLi}
+            hasHook={true}
+            closeOnClickAway={false}
+            showDropdown={isOpen}
+            hookTop="-20%"
+            hookLeft="34%"
+            liOnClick={() => {
+              dropDownOptOnClick
+            }}
+            customClass={stl.dropDown}
+          />
         </div>
       </div>
       <div className={stl.nest}>
@@ -110,9 +137,9 @@ const Comment = ({
             {numOfReplies}
           </div>
         )}
-        {typeof repliedComms !== 'undefined' && showReplied && (
+        {typeof repliedComments !== 'undefined' && showReplied && (
           <div className={stl.nestComments}>
-            {repliedComms.map((data, i) => (
+            {repliedComments.map((data, i) => (
               <div key={i} className={stl.nestComm}>
                 {data}
               </div>
@@ -153,12 +180,13 @@ Comment.propTypes = {
   avatar: PropTypes.node,
   name: PropTypes.string,
   description: PropTypes.string,
+  dropDownOptOnClick: PropTypes.func,
   reactComm: PropTypes.array,
   commentInfo: PropTypes.array,
   handleCommentReact: PropTypes.func,
   handleCommentInfo: PropTypes.func,
   numOfReplies: PropTypes.string,
-  repliedComms: PropTypes.array,
+  repliedComments: PropTypes.array,
   customClass: PropTypes.string,
 }
 

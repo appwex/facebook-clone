@@ -20,13 +20,13 @@
     border-bottom-style: solid;
     border-left-width: 2px;
     border-color: $lightGrayishBlue2;
-    left: -37px;
+    left: -51px;
   }
 
   .treeLine {
     position: absolute;
     height: calc(100% - 43px);
-    left: -42%;
+    left: -44.3%;
     background: $lightGrayishBlue2;
     width: 2px;
     margin-left: 47%;
@@ -40,7 +40,6 @@
   .row {
     display: flex;
     gap: 5px;
-    padding: 0 16px;
   }
 
   .content {
@@ -120,6 +119,16 @@
         background: $lightGrayishBlue2;
       }
     }
+
+    .listLi {
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:hover {
+        background: $veryLightGray2;
+      }
+    }
   }
 
   .row:hover {
@@ -139,7 +148,7 @@
       font-size: 0.9375rem;
       font-weight: bold;
       color: $secondaryText;
-      margin-left: 5.1%;
+      margin-left: 13px;
       padding-right: 6px;
       gap: 7px;
       cursor: pointer;
@@ -150,7 +159,7 @@
       }
 
       .treeJoint2 {
-        left: 34px;
+        left: 18px;
         bottom: 20px;
       }
 
@@ -206,7 +215,7 @@
         margin-left: 4%;
 
         .treeJoint3 {
-          left: 34px;
+          left: 18px;
         }
       }
     }

@@ -7,6 +7,7 @@
   @extend .justifyEnd;
   font-family: Helvetica, Arial, sans-serif;
   user-select: none;
+  z-index: 1;
 
   .heading {
     @extend .flexAlignCen;

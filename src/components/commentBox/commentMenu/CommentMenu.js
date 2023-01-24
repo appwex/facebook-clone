@@ -16,12 +16,14 @@ const CommentMenu = ({ handleClick, cusomClass }) => {
   const ref = useRef()
 
   if (typeof window !== 'undefined') {
-    const optMenu = document.getElementById('optMenu')
-    if (isOpen) {
-      optMenu.style.display = 'block'
-    } else {
-      optMenu.style.display = 'none'
-    }
+    setTimeout(() => {
+      const optMenu = document.getElementById('optMenu')
+      if (isOpen) {
+        optMenu.style.display = 'block'
+      } else {
+        optMenu.style.display = 'none'
+      }
+    }, 100)
   }
 
   const hide = () => {

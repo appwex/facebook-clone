@@ -18,10 +18,10 @@ const commentMenu = {
   commentInfo: ['4h', 'Edited'],
   handleCommentReact: (react) => console.log('Clicked...', react),
   handleCommentInfo: (info) => console.log('Clicked...', info),
-  numOfReplies: '11 Replies',
+  numOfReplies: '3 Replies',
   handleReply,
   treeline: true,
-  repliedComms: [
+  repliedComments: [
     <Comment
       avatar={<AvatarButton width="30px" height="30px" minWidth="30px" />}
       name="John Doe"
