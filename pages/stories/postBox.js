@@ -31,14 +31,14 @@ const postBox = {
   detailName: ['Sponsored'],
   buttons: [
     <IconButton
-      variant="secondary"
+      variant="backgroundLess"
       customClass={stl.button}
       bgColor="none"
       icon={<MoreIcon />}
     />,
     <IconButton
       bgColor="none"
-      variant="secondary"
+      variant="backgroundLess"
       customClass={stl.button}
       icon={<CloseIcon />}
     />,
