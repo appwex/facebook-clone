@@ -1,0 +1,67 @@
+@import 'styles/colors';
+@import 'styles/common';
+
+.container {
+  width: 133px;
+  position: relative;
+  @extend .justifyEnd;
+  font-family: Helvetica, Arial, sans-serif;
+  user-select: none;
+  z-index: 1;
+
+  .heading {
+    @extend .flexAlignCen;
+    gap: 8px;
+    color: $veryDarkGrayishBlue;
+    font-size: 0.9375;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .optionBox {
+    position: absolute;
+    right: 45%;
+    top: 80%;
+    width: 344px;
+    height: 193px;
+    padding: 8px 0;
+    margin-top: 15px;
+    background: $white;
+    border-radius: 8px 0 8px 8px;
+    @extend .dropDownShadow;
+    display: none;
+
+    .icon {
+      position: absolute;
+      bottom: calc(100% - 2px);
+      right: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+  .option {
+    @extend .flexCol;
+    align-items: stretch;
+    padding: 12px 8px;
+    margin: 0 8px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: $veryLightGray2;
+    }
+
+    .optionHead {
+      margin-bottom: 5px;
+      color: $primaryText;
+      font-weight: 500;
+      font-size: 0.9475rem;
+    }
+
+    .optionDesc {
+      color: $secondaryText;
+      font-weight: 400;
+      font-size: 0.75rem;
+    }
+  }
+}

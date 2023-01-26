@@ -19,6 +19,7 @@ const dropdown = {
   ],
   liClass: stl.listLi,
   liOnClick: () => console.log('Clicked...'),
+  closeOnClickAway: true,
   customClass: stl.display,
 }
 
@@ -38,6 +39,7 @@ const dropDownHook = {
   ],
   liClass: stl.listLi,
   liOnClick: () => console.log('Clicked...'),
+  closeOnClickAway: true,
   hasHook: true,
 }
 
@@ -57,6 +59,7 @@ const dropDownUp = {
   ],
   liClass: stl.listLi,
   liOnClick: () => console.log('Clicked...'),
+  closeOnClickAway: true,
   dropDownPos: 'up',
 }
 
@@ -76,6 +79,7 @@ const dropDownHookUp = {
   ],
   liClass: stl.listLi,
   liOnClick: () => console.log('Clicked...'),
+  closeOnClickAway: true,
   dropDownPos: 'up',
   hasHook: true,
 }

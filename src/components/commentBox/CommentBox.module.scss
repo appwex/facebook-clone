@@ -1,0 +1,20 @@
+@import 'styles/common';
+
+.commentBox {
+  width: 100%;
+  max-width: 680px;
+  @extend .flexCol;
+  gap: 10px 0;
+
+  .row1 {
+    @extend .justifyEnd;
+  }
+
+  .row2 {
+  }
+
+  .comments {
+    @extend .flexCol;
+    gap: 7px;
+  }
+}

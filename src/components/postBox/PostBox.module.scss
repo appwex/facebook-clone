@@ -2,13 +2,12 @@
 @import 'styles/common';
 
 .container {
-  max-height: 1000px;
-  min-width: 0;
   width: 680px;
   background: $white;
   border-radius: 8px;
   @extend .boxShadow;
   font-family: Helvetica, Arial, sans-serif;
+  color: $secondaryText;
 
   .header {
     min-height: 36px;
@@ -162,5 +161,11 @@
       padding: 4px;
       height: 42px;
     }
+  }
+
+  .comments {
+    padding: 0 11px 10px 11px;
+    @extend .flexCol;
+    gap: 5px;
   }
 }

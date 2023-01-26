@@ -15,6 +15,11 @@ const StoriesLinks = () => (
     <Link href="/stories/postBox">Post Box</Link>
     <Link href="/stories/createRoom">Create Room</Link>
     <Link href="/stories/dropdown">Dropdown</Link>
+    <Link href="/stories/comment">Comment Menu</Link>
+    <Link href="/stories/comment">Comment</Link>
+    <Link href="/stories/enterComment">Enter Comment</Link>
+    <Link href="/stories/linkButton">Link Button</Link>
+    <Link href="/stories/commentBox">Comment Box</Link>
   </div>
 )
 

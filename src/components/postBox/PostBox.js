@@ -10,6 +10,7 @@ import LoveIcon from 'assets/svg/facebookLoveIcon.svg'
 import LikeIcon from 'assets/svg/facebookLikeIcon.svg'
 
 import stl from './PostBox.module.scss'
+import { useState } from 'react'
 
 const PostBox = ({
   imgSrc,
@@ -23,19 +24,22 @@ const PostBox = ({
   numOfComments,
   numOfShares,
   handleImage,
-  handleLike,
+  handleReact,
   handleComment,
   handleShare,
   handleReacted,
   interactOpt,
+  comments,
   customClass,
 }) => {
+  const [showComments, setShowComments] = useState(false)
+
   return (
     <div className={clsx(stl.container, customClass)}>
       <div className={stl.header}>
         <AvatarButton width="100%" imgSrc={imgSrc} />
         <div className={stl.headerContent}>
-          <Link href={titleLink}>
+          <Link href={`${titleLink}`}>
             <h4>{title}</h4>
           </Link>
           <div className={stl.detail}>
@@ -60,11 +64,15 @@ const PostBox = ({
       </div>
       <div id="message" className={stl.message}>
         {msgContent.map((msg, i) => {
-          return (
-            <span key={i} className={stl.msgContent}>
-              {msg}
-            </span>
-          )
+          if (msg === '') {
+            return <br key={i} />
+          } else {
+            return (
+              <span key={i} className={stl.msgContent}>
+                {msg}
+              </span>
+            )
+          }
         })}
       </div>
       <div
@@ -89,7 +97,7 @@ const PostBox = ({
             </span>
             <span
               onClick={() => {
-                handleLike()
+                handleReact()
               }}
               className={stl.numOfReact}
             >
@@ -99,6 +107,11 @@ const PostBox = ({
           <div className={stl.right}>
             <span
               onClick={() => {
+                if (showComments === false) {
+                  setShowComments(true)
+                } else {
+                  setShowComments(false)
+                }
                 handleComment()
               }}
             >
@@ -116,12 +129,21 @@ const PostBox = ({
         <div className={stl.divider}></div>
         <div className={stl.interactOpt}>{interactOpt.map((opt) => opt)}</div>
       </div>
+      {typeof numOfComments !== 'undefined' && showComments && (
+        <div className={stl.comments}>
+          <div className={stl.divider}></div>
+          {comments}
+        </div>
+      )}
     </div>
   )
 }
 
 PostBox.defaultProps = {
   titleLink: '',
+  handleComment: () => console.log('Clicked...'),
+  handleShare: () => console.log('Clicked...'),
+  handleReacted: () => console.log('Clicked...'),
 }
 
 PostBox.propTypes = {
@@ -136,7 +158,7 @@ PostBox.propTypes = {
   numOfComments: PropTypes.string,
   numOfShares: PropTypes.string,
   handleImage: PropTypes.func,
-  handleLike: PropTypes.func,
+  handleReact: PropTypes.func,
   handleComment: PropTypes.func,
   handleShare: PropTypes.func,
   handleReacted: PropTypes.func,
