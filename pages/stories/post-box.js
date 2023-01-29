@@ -20,7 +20,7 @@ import stl from './Stories.module.scss'
 import CommentBox from 'components/comment-box'
 
 const description =
-  'Id esse veniam deserunt fugiat reprehenderit pariatur pariatur. Aliquip Lorem commodo elit deserunt non reprehenderit ad proident non incididunt consectetur veniam ea duis. Nulla ex duis proident laborum eiusmod dolore duis dolore proident aliquip culpa non exercitation eiusmod. 😁 '
+  'Id esse veniam deserunt fugiat reprehenderit pariatur pariatur. Aliquip Lorem commodo elit deserunt non reprehenderit ad proident non incididunt consectetur veniam ea duis. Nulla ex duis proident laborum eiusmod dolore duis dolore proident aliquip culpa non exercitation eiusmod.  '
 
 const text =
   'Ex deserunt cupidatat nulla cupidatat qui exercitation officia nulla. Exercitation consequat commodo consectetur ea esse excepteur magna. Non Lorem ex est aute Lorem nostrud incididunt sunt aliquip irure id minim mollit aliqua. Nostrud occaecat proident officia commodo consectetur aliqua eu Lorem. Tempor ut sint nulla sunt incididunt sint duis quis ad veniam ullamco nulla. Est in nisi nostrud amet dolor aliquip.'
@@ -132,7 +132,7 @@ const postBox = {
                 <AvatarButton width="30px" height="30px" minWidth="30px" />
               }
               name="John Doe"
-              description="Id esse veniam deserunt ion eiusmod. 😁 "
+              description="Id esse veniam deserunt ion eiusmod.  "
               reactComm={['Like', 'Reply', 'Share']}
               commentInfo={['4h', 'Edited']}
               handleCommentReact={(react) => console.log('Clicked...', react)}

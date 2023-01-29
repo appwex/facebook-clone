@@ -3,7 +3,7 @@ import Comment from 'components/comment-box/comment'
 import AvatarButton from 'components/avatar-button'
 
 const description =
-  'Id esse veniam deserunt fugiat reprehenderit pariatur pariatur. Aliquip Lorem commodo elit deserunt non reprehenderit ad proident non incididunt consectetur veniam ea duis. Nulla ex duis proident laborum eiusmod dolore duis dolore proident aliquip culpa non exercitation eiusmod. 😁 '
+  'Id esse veniam deserunt fugiat reprehenderit pariatur pariatur. Aliquip Lorem commodo elit deserunt non reprehenderit ad proident non incididunt consectetur veniam ea duis. Nulla ex duis proident laborum eiusmod dolore duis dolore proident aliquip culpa non exercitation eiusmod.  '
 
 const handleReply = () => {
   console.log('Clicked...')
@@ -50,7 +50,7 @@ const commentMenu = {
       key={3}
       avatar={<AvatarButton width="30px" height="30px" minWidth="30px" />}
       name="John Doe"
-      description="Id esse veniam deserunt ion eiusmod. 😁 "
+      description="Id esse veniam deserunt ion eiusmod.  "
       reactComm={['Like', 'Reply', 'Share']}
       commentInfo={['4h', 'Edited']}
       handleCommentReact={(react) => console.log('Clicked...', react)}

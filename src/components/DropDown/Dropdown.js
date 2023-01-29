@@ -25,7 +25,7 @@ const Dropdown = ({
   hookRight,
   hookBottom,
   hookLeft,
-  closeOnClickAway,
+  // closeOnClickAway,
   showDropdown,
   customClass,
 }) => {
@@ -122,7 +122,7 @@ Dropdown.propTypes = {
   hookRight: PropTypes.string,
   hookBottom: PropTypes.string,
   hookLeft: PropTypes.string,
-  closeOnClickAway: PropTypes.bool,
+  // closeOnClickAway: PropTypes.bool,
   showDropdown: PropTypes.bool,
   customClass: PropTypes.string,
 }
