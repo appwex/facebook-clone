@@ -15,10 +15,12 @@ const commentBox = {
   typeOfComments: <CommentMenu />,
   comments: [
     <Comment
+      key={11}
       numOfReplies="3 Replies"
       treeline={true}
       repliedComments={[
         <Comment
+          key={1}
           avatar={<AvatarButton width="30px" height="30px" minWidth="30px" />}
           name="John Doe"
           description={description}
@@ -30,6 +32,7 @@ const commentBox = {
           treejoint={true}
         />,
         <Comment
+          key={2}
           avatar={<AvatarButton width="30px" height="30px" minWidth="30px" />}
           name="John Doe"
           description={description}
@@ -41,6 +44,7 @@ const commentBox = {
           treejoint={true}
         />,
         <Comment
+          key={3}
           avatar={<AvatarButton width="30px" height="30px" minWidth="30px" />}
           name="John Doe"
           description="Id esse veniam deserunt ion eiusmod. 😁 "
@@ -53,13 +57,13 @@ const commentBox = {
         />,
       ]}
     />,
-    <Comment />,
-    <Comment />,
-    <Comment />,
-    <Comment />,
-    <Comment />,
-    <Comment />,
-    <Comment />,
+    <Comment key={4} />,
+    <Comment key={5} />,
+    <Comment key={6} />,
+    <Comment key={7} />,
+    <Comment key={8} />,
+    <Comment key={9} />,
+    <Comment key={10} />,
   ],
   nextComment: <LinkButton content="View more comments" />,
   nextCommentHandler: () => console.log('Clicked...'),

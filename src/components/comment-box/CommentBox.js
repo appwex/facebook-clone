@@ -14,8 +14,6 @@ const CommentBox = ({
   nextCommentHandler,
   customClass,
 }) => {
-  const [Comments, setComments] = useState([])
-
   const getComments = (numOfComments = 0) => {
     console.log(comments)
     let Comm = []
@@ -23,12 +21,8 @@ const CommentBox = ({
       const comment = comments[i]
       Comm.push(comment)
     }
-    setComments(Comm)
+    return Comm
   }
-
-  useEffect(() => {
-    getComments()
-  }, [])
 
   return (
     <div className={clsx(stl.commentBox, customClass)}>
@@ -40,7 +34,7 @@ const CommentBox = ({
       )}
       {typeof nextComment !== 'undefined' && <EnterComment />}
       <div className={stl.comments}>
-        {Comments.map((comment, i) => (
+        {getComments().map((comment, i) => (
           <div key={i}>{comment}</div>
         ))}
       </div>

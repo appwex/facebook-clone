@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import Stories from 'components/stories'
 import PostBox from 'components/post-box'
 
@@ -31,12 +33,14 @@ const postBox = {
   detailName: ['Sponsored'],
   buttons: [
     <IconButton
+      key={1}
       variant="backgroundLess"
       customClass={stl.button}
       bgColor="none"
       icon={<MoreIcon />}
     />,
     <IconButton
+      key={2}
       bgColor="none"
       variant="backgroundLess"
       customClass={stl.button}
@@ -45,7 +49,12 @@ const postBox = {
   ],
   msgContent: [msg],
   media: (
-    <img src="https://i.postimg.cc/DyNZSMh1/facebook-Image2.jpg" alt="image" />
+    <Image
+      src="https://i.postimg.cc/DyNZSMh1/facebook-Image2.jpg"
+      width=""
+      height=""
+      alt="image"
+    />
   ),
   numOfComments: '161 comments',
   handleComment: () => console.log('Clicked...'),
@@ -85,10 +94,12 @@ const postBox = {
       typeOfComments={<CommentMenu />}
       comments={[
         <Comment
+          key={12}
           numOfReplies="3 Replies"
           treeline={true}
           repliedComments={[
             <Comment
+              key={1}
               avatar={
                 <AvatarButton width="30px" height="30px" minWidth="30px" />
               }
@@ -102,6 +113,7 @@ const postBox = {
               treejoint={true}
             />,
             <Comment
+              key={2}
               avatar={
                 <AvatarButton width="30px" height="30px" minWidth="30px" />
               }
@@ -115,6 +127,7 @@ const postBox = {
               treejoint={true}
             />,
             <Comment
+              key={3}
               avatar={
                 <AvatarButton width="30px" height="30px" minWidth="30px" />
               }
@@ -129,14 +142,14 @@ const postBox = {
             />,
           ]}
         />,
-        <Comment />,
-        <Comment />,
-        <Comment />,
-        <Comment />,
-        <Comment />,
-        <Comment />,
-        <Comment />,
-        <Comment />,
+        <Comment key={4} />,
+        <Comment key={5} />,
+        <Comment key={6} />,
+        <Comment key={7} />,
+        <Comment key={8} />,
+        <Comment key={9} />,
+        <Comment key={10} />,
+        <Comment key={11} />,
       ]}
       nextComment={<LinkButton content="View more comments" />}
     />
