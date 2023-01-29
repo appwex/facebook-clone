@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import HookIcon from 'assets/svg/hook.svg'
 
-import useClickOutside from 'lib/hook'
+// import useClickOutside from 'lib/hook'
 
 import stl from './Dropdown.module.scss'
 
@@ -55,7 +55,7 @@ const Dropdown = ({
     setIsOpen(false)
   }
 
-  useClickOutside(hideDropdown, ref)
+  // useClickOutside(hideDropdown, ref)
 
   return (
     <div ref={ref} className={clsx(stl.container, customClass)}>
