@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { useRef, useState } from 'react'
 import clsx from 'clsx'
 
-import HookIcon from 'assets/svg/hookIcon.svg'
+import HookIcon from 'assets/svg/hook.svg'
 
 import useClickOutside from 'lib/hook'
 

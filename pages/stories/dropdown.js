@@ -1,5 +1,5 @@
 import Stories from 'components/stories'
-import Dropdown from 'components/DropDown'
+import Dropdown from 'components/dropdown'
 
 import stl from './Stories.module.scss'
 

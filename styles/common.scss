@@ -36,6 +36,12 @@
   flex-direction: column;
 }
 
+.clearStl {
+  background: none;
+  outline: none;
+  border: none;
+}
+
 .divider {
   border-top: 1px solid $lightGrayishBlue;
 }

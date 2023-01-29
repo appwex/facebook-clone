@@ -1,6 +1,6 @@
 import Stories from 'components/stories'
-import Comment from 'components/commentBox/comment'
-import AvatarButton from 'components/avatarButton'
+import Comment from 'components/comment-box/comment'
+import AvatarButton from 'components/avatar-button'
 
 const description =
   'Id esse veniam deserunt fugiat reprehenderit pariatur pariatur. Aliquip Lorem commodo elit deserunt non reprehenderit ad proident non incididunt consectetur veniam ea duis. Nulla ex duis proident laborum eiusmod dolore duis dolore proident aliquip culpa non exercitation eiusmod. 😁 '

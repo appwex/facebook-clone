@@ -1,7 +1,7 @@
 import Stories from 'components/stories'
 import Searchbar from 'components/searchbar'
 
-import SearchIcon from 'assets/svg/search-icon.svg'
+import SearchIcon from 'assets/svg/search.svg'
 
 const searchbar = {
   arg: 'Searchbar',
