@@ -55,7 +55,7 @@ const Dropdown = ({
     setIsOpen(false)
   }
 
-  closeOnClickAway === true && useClickOutside(hideDropdown, ref)
+  useClickOutside(hideDropdown, ref)
 
   return (
     <div ref={ref} className={clsx(stl.container, customClass)}>

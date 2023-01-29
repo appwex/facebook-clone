@@ -100,7 +100,7 @@ const CreateRoom = ({ profiles, handleCreateRoom, customClass }) => {
 }
 
 CreateRoom.defaultProps = {
-  profiles: [<AvatarButton variant="status" />],
+  profiles: [<AvatarButton key={1} variant="status" />],
   handleCreateRoom: () => console.log('Clicked...'),
 }
 

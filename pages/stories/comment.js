@@ -23,6 +23,7 @@ const commentMenu = {
   treeline: true,
   repliedComments: [
     <Comment
+      key={1}
       avatar={<AvatarButton width="30px" height="30px" minWidth="30px" />}
       name="John Doe"
       description={description}
@@ -34,6 +35,7 @@ const commentMenu = {
       treejoint={true}
     />,
     <Comment
+      key={2}
       avatar={<AvatarButton width="30px" height="30px" minWidth="30px" />}
       name="John Doe"
       description={description}
@@ -45,6 +47,7 @@ const commentMenu = {
       treejoint={true}
     />,
     <Comment
+      key={3}
       avatar={<AvatarButton width="30px" height="30px" minWidth="30px" />}
       name="John Doe"
       description="Id esse veniam deserunt ion eiusmod. 😁 "

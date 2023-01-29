@@ -41,9 +41,9 @@ AddPostManager.defaultProps = {
     />
   ),
   buttons: [
-    <MenuItems icon={<LiveVideoIcon />} label="Live video" />,
-    <MenuItems icon={<PhotoVideoIcon />} label="Photo/Video" />,
-    <MenuItems icon={<FeelingIcon />} label="Feeling/Activity" />,
+    <MenuItems key={1} icon={<LiveVideoIcon />} label="Live video" />,
+    <MenuItems key={2} icon={<PhotoVideoIcon />} label="Photo/Video" />,
+    <MenuItems key={3} icon={<FeelingIcon />} label="Feeling/Activity" />,
   ],
 }
 
