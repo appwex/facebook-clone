@@ -108,13 +108,11 @@ const Comment = ({
             listDropdown={['Hide comment', 'Report comment']}
             liClass={stl.listLi}
             hasHook={true}
-            closeOnClickAway={false}
+            // closeOnClickAway={false}
             showDropdown={isOpen}
             hookTop="-20%"
             hookLeft="34%"
-            liOnClick={() => {
-              dropDownOptOnClick
-            }}
+            liOnClick={dropDownOptOnClick}
             customClass={stl.dropDown}
           />
         </div>
