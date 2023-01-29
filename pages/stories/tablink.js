@@ -1,9 +1,9 @@
 import Stories from 'components/stories'
 import Tablink from 'components/tablink'
 
-import HomeIcon from 'assets/svg/homeIcon.svg'
-import ListViewIcon from 'assets/svg/listViewIcon.svg'
-import GridViewIcon from 'assets/svg/gridViewIcon.svg'
+import HomeIcon from 'assets/svg/home.svg'
+import ListViewIcon from 'assets/svg/list-view.svg'
+import GridViewIcon from 'assets/svg/grid-view.svg'
 
 const tablinkPrimary = {
   arg: 'Primary',

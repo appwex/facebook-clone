@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import HomeIcon from 'assets/svg/homeIcon.svg'
+import HomeIcon from 'assets/svg/home.svg'
 
 import stl from './Tablink.module.scss'
 
@@ -15,29 +15,22 @@ const Tablink = ({
   link,
   onClick,
   customClass,
-}) => {
-  return (
-    <div
-      onClick={() => {
-        onClick()
-      }}
-      className={clsx(stl[type], customClass)}
-    >
-      <Link href={`${link}`}>
-        <div className={clsx(stl.content, stl[variant])}>
-          {icon}
-          {label}
-        </div>
-        <div style={{ background: bgColor }} className={stl.borderBot}></div>
-      </Link>
-    </div>
-  )
-}
+}) => (
+  <div onClick={onClick} className={clsx(stl[type], customClass)}>
+    <Link href={`${link}`}>
+      <div className={clsx(stl.content, stl[variant])}>
+        {icon}
+        {label}
+      </div>
+      <div style={{ background: bgColor }} className={stl.borderBot}></div>
+    </Link>
+  </div>
+)
 
 Tablink.defaultProps = {
   variant: 'primary',
   bgColor: '#1b74e4',
-  link: '',
+  link: '#',
   icon: <HomeIcon />,
   onClick: () => console.log('Clicked...'),
 }
