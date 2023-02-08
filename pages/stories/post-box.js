@@ -51,8 +51,8 @@ const postBox = {
   media: (
     <Image
       src="https://i.postimg.cc/DyNZSMh1/facebook-Image2.jpg"
-      width=""
-      height=""
+      width={100}
+      height={100}
       alt="image"
     />
   ),
